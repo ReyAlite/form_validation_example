@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Form Validation Example</h1>
+    <form id="introduction" onsubmit="return false">
+        <div id="nameContainer">
+            <div class="inputContainer">
+                <input type="text" name="name" id="nameInput" placeholder="Name">
+                <p id="nameError" class="errorMsg"></p>
+            </div>
+            <button type="button" onclick="checkName()">Enter</button>
+        </div>
+    </form>
+    <div id="questions">
+        <div id="introductionContainer">
+            <span>Hi</span>
+            <span id="userName"></span>
+            <p>This little form is just a practice. It's you and me, do you trust a stranger?</p>
+        </div>
+        <form id="questions-form">
+            <div>
+                <label for="age">Age ?</label>
+                <div class="inputContainer">
+                    <input type="text" name="age" id="ageInput" onfocusout="checkAge()">
+                    <p id="ageError" class="errorMsg"></p>
+                </div>
+            </div>
+            <div>
+                <label for="name">What do you do for a living?</label>
+                <div class="inputContainer">
+                    <input type="text" name="name" id="jobInput" onfocusout="checkJob()">
+                    <p id="jobError" class="errorMsg"></p>
+                </div>
+            </div>
+            <div>
+                <label for="name">What would you like to do for a living?</label>
+                <div class="inputContainer">
+                    <input type="text" name="name" id="job2Input" onfocusout="checkDreamJob()">
+                    <p id="jobError2" class="errorMsg"></p>
+                </div>
+            </div>
+            <div>
+                <label for="secret">Tell me a secret:</label>
+                <textarea id="secret" name="about" rows="5" cols="35"></textarea>
+                <p id="hide-button" onclick="toggleSecret()" class="visible">Hide</p>
+            </div>
+        </form>
+        <button id="submit-button" onclick="resetForm();">SUBMIT</button>
+        <p id="submit-txt">Don't worry, the button won't submit anything, it will simply delete your entries and they'll
+            be gone
+            forever. Well, if you take a strangers word I guess.</p>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

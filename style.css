@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    text-align: center;
+    margin-top: 3em;
+    background-color: #4642bd;
+    color: white;
+}
+/*NAME*/
+#nameContainer{
+    margin-top: 2em;
+}
+#nameContainer .inputContainer{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+}
+#nameContainer button{
+    margin-top: 1em;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+}
+#nameInput{
+    border: none; 
+    border-bottom: 2px dotted white;
+    background-color: #4642bd;
+}
+::placeholder{
+    color: white;
+    opacity: .5;
+}
+input:focus{
+    outline: 0;
+}
+#nameContainer .errorMsg{
+    font-size: 10px;
+    color: #f08181;
+    align-self: flex-start;
+}
+.errorMsg{
+    font-size: 10px;
+    color: #973535;
+    align-self: flex-start;
+}
+
+/*INTRODUCTION*/
+#introductionContainer{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.fadeout{
+    animation-duration: 2s;
+    animation-name: fadeout;
+    display: none;
+}
+
+@keyframes fadeout {
+    from {
+      opacity: 100%;
+    }
+  
+    to {
+      opacity: 0%;
+    }
+  }
+/*QUESTIONS*/
+#questions{
+    opacity: 0%;
+}
+.fadein{
+    animation-duration: 2s;
+    animation-name: fadein;
+}
+
+@keyframes fadein{
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+#questions-form div:not(:first-of-type){
+    margin-top: 15px;
+}
+#questions-form{
+    margin: auto;
+    width: 300px;
+    border: 2px solid;
+    border-radius: 8px;
+    border-color: #908ed7;
+    background-color: #908ed7;
+    padding: 15px; 
+    text-align: left;
+    font-size: 12px;
+    color: black;
+}
+
+#questions-form input, textarea{
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: #908ed7;
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+}
+
+/*SECRET AREA*/
+#hide-button{
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+/*SUBMIT*/
+
+#submit-button{
+    margin-top: 2em;
+    background-color: white;
+    border-radius: 2px;
+    width: 80px;
+}
+
+#submit-txt{
+    font-size: 10px;
+    margin-top: 1em;
+}
